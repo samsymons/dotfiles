@@ -1,0 +1,27 @@
+export PATH=$HOME/.dotfiles/bin:/usr/local/bin:$HOME/.rbenv/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
+
+# source every .zsh file in this rep
+for config_file ($ZSH/**/*.zsh) source $config_file
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+
+# quote pasted URLs
+autoload -U url-quote-magic
+zle -N self-insert url-quote-magic
+
+# load every completion after autocomplete loads
+for config_file ($ZSH/**/completion.sh) source $config_file
+
+source `brew --prefix grc`/etc/grc.bashrc
+
+# added by travis gem
+[ -f /Users/samsymons/.travis/travis.sh ] && source /Users/samsymons/.travis/travis.sh
+
+# start rbenv
+eval "$(rbenv init -)"

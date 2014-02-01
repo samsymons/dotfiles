@@ -1,0 +1,11 @@
+install grc
+install hub
+install imagemagick
+install reattach-to-user-namespace
+install the_silver_searcher
+install tmux
+install tree
+install wget
+install zsh
+
+update
