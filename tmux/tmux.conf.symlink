@@ -71,7 +71,7 @@ set-option -g message-fg colour0
 set-option -g message-bg colour4
 set-option -g display-time 5000
 
-## set status bar
+## Configure the status bar
 set-option -g status-utf8 on
 set-option -g status-interval 1
 set-option -g status-fg colour10
@@ -87,7 +87,7 @@ set-option -g status-right '#[fg=yellow]#S#[fg=default] // #(battery -o tmux -m 
 set-option -g status-right-length 100
 set-option -g status-left-length 120
 
-## highlight active window
+## Highlight the active window
 set-window-option -g window-status-current-fg colour4
 set-window-option -g window-status-current-attr bold
 set-window-option -g window-status-current-bg default
@@ -96,10 +96,7 @@ set-window-option -g window-status-current-format '[ #I #W ]'
 set-window-option -g window-status-bell-fg colour226
 set-window-option -g window-status-bell-bg colour23
 
-# renumber windows
 set-option -g renumber-windows on
-
-# starts windows at 1 not 0
 set-option -g base-index 1
 
 set-option -g   visual-activity   off
@@ -124,3 +121,10 @@ set-window-option -g    mode-fg   black  # selector foreground
 unbind -t vi-copy Enter
 set -g default-command "reattach-to-user-namespace -l zsh"
 bind-key -t vi-copy Enter copy-pipe 'reattach-to-user-namespace pbcopy'
+
+## Navigate both vim and tmux splits
+bind -n C-h run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim(diff)?$' && tmux send-keys C-h) || tmux select-pane -L"
+bind -n C-j run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim(diff)?$' && tmux send-keys C-j) || tmux select-pane -D"
+bind -n C-k run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim(diff)?$' && tmux send-keys C-k) || tmux select-pane -U"
+bind -n C-l run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim(diff)?$' && tmux send-keys C-l) || tmux select-pane -R"
+bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim(diff)?$' && tmux send-keys 'C-\\') || tmux select-pane -l"
