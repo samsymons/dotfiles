@@ -41,10 +41,19 @@
   user = samsymons
 
 [difftool]
-  prompt = false
+	prompt = false
 
 [diff]
-  tool = ksdiff
+	tool = Kaleidoscope
 
 [web]
   browser = open
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
