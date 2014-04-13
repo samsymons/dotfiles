@@ -66,6 +66,8 @@ set splitbelow                  " Opens horizontal split below current window
 
 set incsearch        " Find the next match as we type the search
 set hlsearch         " Hilight searches by default
+set ignorecase       " Search case insensitively
+set smartcase        " Search case sensitively if our search contains uppercase letters
 set viminfo='100,f1  " Save up to 100 marks, enable capital marks
 
 " Turn Off Swap Files

@@ -1,4 +1,7 @@
-export PATH=$HOME/.dotfiles/bin:/usr/local/bin:$HOME/.rbenv/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$HOME/.dotfiles/bin:./bin:/usr/local/bin:$HOME/.rbenv/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH="/usr/local/narwhal/bin:$PATH"
+export GOPATH=/home/user/gocode
+export CAPP_BUILD="/Users/samsymons/Code/Cortex/Air Forms/Build"
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
