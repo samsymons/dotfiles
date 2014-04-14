@@ -4,6 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+runtime macros/matchit.vim
+
 Bundle 'gmarik/vundle'
 
 Bundle 'altercation/vim-colors-solarized'
