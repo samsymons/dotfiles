@@ -1,6 +1,6 @@
 [user]
   name = Sam Symons
-  email = samsymons@me.com
+  email = sam@samsymons.com
 [color]
   ui = auto
 [color "branch"]
@@ -22,38 +22,30 @@
   co = checkout
   ctags = !.git/hooks/ctags
   st = status
-
 [core]
   excludesfile = ~/.globalgitignore
-
 [init]
   templatedir = ~/.git_template
-
 [push]
-  default = upstream
-
+  default = tracking
+[pull]
+  rebase = true
 [hub]
   protocol = https
-
-[branch]
-
 [github]
   user = samsymons
-
 [difftool]
-	prompt = false
-
+  prompt = false
 [diff]
-	tool = Kaleidoscope
-
+  tool = Kaleidoscope
 [web]
   browser = open
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 [mergetool]
-	prompt = false
+  prompt = false
 [merge]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
