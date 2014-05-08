@@ -7,14 +7,14 @@ export DOTFILES=$HOME/.dotfiles
 export PROJECTS=$HOME/Code
 
 # source every .zsh file in this rep
-for config_file ($ZSH/**/*.zsh) source $config_file
+for config_file ($DOTFILES/**/source/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
 
 # load every completion after autocomplete loads
-for config_file ($ZSH/**/completion.sh) source $config_file
+for config_file ($DOTFILES/**/source/completion.zsh) source $config_file
 
 # added by travis gem
 [ -f /Users/samsymons/.travis/travis.sh ] && source /Users/samsymons/.travis/travis.sh

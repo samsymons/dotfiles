@@ -1,3 +1,5 @@
+#!/bin/sh
+
 SHA=${1:-HEAD}
 BRANCH=${2:-develop}
 
