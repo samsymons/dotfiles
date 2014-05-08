@@ -1,0 +1,14 @@
+# OS X
+.DS_Store
+._*
+
+# Vim
+*.swp
+*.un~
+.netrwhist
+
+.Spotlight-V100
+.Trashes
+
+.env
+pkg

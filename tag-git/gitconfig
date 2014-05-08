@@ -1,51 +1,56 @@
 [user]
   name = Sam Symons
   email = sam@samsymons.com
+
 [color]
-  ui = auto
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-[color "status"]
-  added = yellow
-  changed = blue
-  untracked = cyan
+  ui = true
+  wtf = true
+
 [alias]
-  br = branch
+  amend = commit --amend -C HEAD
   branches = branch -a --color -v
   co = checkout
-  ctags = !.git/hooks/ctags
-  st = status
+  count = shortlog -sn --no-merges
+  recent = shortlog --since=yesterday
+  today = shortlog --since=midnight
+
+[apply]
+  whitespace = warn
+
 [core]
-  excludesfile = ~/.globalgitignore
-[init]
-  templatedir = ~/.git_template
+  excludesfile = ~/.gitignore
+
+[fetch]
+  prune = true
+
 [push]
   default = tracking
+
 [pull]
   rebase = true
+
 [hub]
   protocol = https
+
 [github]
   user = samsymons
+
 [difftool]
   prompt = false
+
 [diff]
   tool = Kaleidoscope
-[web]
-  browser = open
+
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
+
 [mergetool]
   prompt = false
+  keepBackup = false
+
 [merge]
   tool = Kaleidoscope
