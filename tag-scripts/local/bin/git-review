@@ -1,0 +1,8 @@
+SHA=${1:-HEAD}
+BRANCH=${2:-develop}
+
+if [ $SHA == $BRANCH ]; then
+  SHA=HEAD
+fi
+
+git difftool $BRANCH...$SHA
