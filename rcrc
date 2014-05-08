@@ -1,0 +1,3 @@
+EXCLUDES="README.md source"
+DOTFILES_DIRS="~/.dotfiles-rcm"
+TAGS="zsh scripts git vim lldb ruby ghc tmux color ctags curl homebrew"
