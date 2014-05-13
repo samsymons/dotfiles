@@ -3,7 +3,7 @@ export PATH="/usr/local/narwhal/bin:$PATH"
 export GOPATH=/home/user/gocode
 export CAPP_BUILD="/Users/samsymons/Code/Cortex/Air Forms/Build"
 
-export DOTFILES=$HOME/.dotfiles-rcm
+export DOTFILES=$HOME/.dotfiles
 export PROJECTS=$HOME/Code
 
 # source every .zsh file in this rep
