@@ -2,7 +2,6 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
 fpath=($ZSH/zsh/completions/src $ZSH/zsh/functions $fpath)
-autoload -U $ZSH/zsh/functions/*(:t)
 
 setopt NO_BG_NICE
 setopt NO_HUP
