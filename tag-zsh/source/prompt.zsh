@@ -1,66 +1,91 @@
-autoload -U colors && colors
-prompt_opts=( cr subst percent )
+# Pure
+# by Sindre Sorhus
+# https://github.com/sindresorhus/pure
+# MIT License
 
-export PROMPT='%(?.%F{green}.%F{red})›%f '
-export RPROMPT=$'$(git_info)'
+# For my own and others sanity
+# git:
+# %b => current branch
+# %a => current action (rebase/merge)
+# prompt:
+# %F => color dict
+# %f => reset color
+# %~ => current path
+# %* => time
+# %n => username
+# %m => shortname host
+# %(?..) => prompt conditional - %(condition.true.false)
 
-git_info() {
-  if git_dir &>/dev/null; then
-    echo "$(current_branch)$(rebase_info)$(repo_dirty)$(needs_push)$(current_sha)"
-  fi
+# fastest possible way to check if repo is dirty
+prompt_pure_git_dirty() {
+	# check if we're in a git repo
+	command git rev-parse --is-inside-work-tree &>/dev/null || return
+	# check if it's dirty
+	command git diff --quiet --ignore-submodules HEAD &>/dev/null
+
+	(($? == 1)) && echo ' *'
 }
 
-ruby_version() {
-  rbenv version-name
+prompt_pure_preexec() {
+	# shows the current dir and executed command in the title when a process is active
+	print -Pn "\e]0;"
+	echo -nE "$PWD:t: $2"
+	print -Pn "\a"
 }
 
-current_branch() {
-  local branch_name="$(current_branch_name)"
-
-  if [ "$branch_name" = "HEAD" ]; then
-    echo "%{$fg[red]%}DETACHED%{$reset_color%}"
-  else
-    echo "%{$fg[blue]%}$branch_name%{$reset_color%}"
-  fi
+# string length ignoring ansi escapes
+prompt_pure_string_length() {
+	echo ${#${(S%%)1//(\%([KF1]|)\{*\}|\%[Bbkf])}}
 }
 
-current_sha() {
-  echo " %{$fg[yellow]%}$(git rev-parse --short HEAD)%{$reset_color%}"
+prompt_pure_precmd() {
+	# shows the full path in the title
+	print -Pn '\e]0;%~\a'
+
+	# git info
+	vcs_info
+
+	local prompt_pure_preprompt='\n%F{blue}%~%F{242}$vcs_info_msg_0_`prompt_pure_git_dirty` $prompt_pure_username%f'
+	print -P $prompt_pure_preprompt
+
+	# check async if there is anything to pull
+	(( ${PURE_GIT_PULL:-1} )) && {
+		# check if we're in a git repo
+		command git rev-parse --is-inside-work-tree &>/dev/null &&
+		# check check if there is anything to pull
+		command git fetch &>/dev/null &&
+		# check if there is an upstream configured for this branch
+		command git rev-parse --abbrev-ref @'{u}' &>/dev/null &&
+		(( $(command git rev-list --right-only --count HEAD...@'{u}' 2>/dev/null) > 0 )) &&
+		# some crazy ansi magic to inject the symbol into the previous line
+		print -Pn "\e7\e[A\e[1G\e[`prompt_pure_string_length $prompt_pure_preprompt`C%F{yellow}⇣%f\e8"
+	} &!
 }
 
-rebase_info() {
-  local git_dir="$(git_dir)"
 
-  if [ -f "$git_dir/BISECT_LOG" ]; then
-    echo "+bisect"
-  elif [ -f "$git_dir/MERGE_HEAD" ]; then
-    echo "+merge"
-  else
-    for file in rebase rebase-apply rebase-merge; do
-      if [ -e "$git_dir/$file" ]; then
-        echo "+rebase"
-        break
-      fi
-    done
-  fi
+prompt_pure_setup() {
+	# prevent percentage showing up
+	# if output doesn't end with a newline
+	export PROMPT_EOL_MARK=''
+
+	prompt_opts=(cr subst percent)
+
+	zmodload zsh/datetime
+	autoload -Uz add-zsh-hook
+	autoload -Uz vcs_info
+
+	add-zsh-hook precmd prompt_pure_precmd
+	add-zsh-hook preexec prompt_pure_preexec
+
+	zstyle ':vcs_info:*' enable git
+	zstyle ':vcs_info:git*' formats ' %b'
+	zstyle ':vcs_info:git*' actionformats ' %b|%a'
+
+	# show username@host if logged in through SSH
+	[[ "$SSH_CONNECTION" != '' ]] && prompt_pure_username='%n@%m '
+
+	# prompt turns red if the previous command didn't exit with 0
+	PROMPT='%(?.%F{green}.%F{red})›%f '
 }
 
-repo_dirty() {
-  if [[ ! $(git status 2>/dev/null) =~ "directory clean" ]]; then
-    echo " %{$fg[red]%}✗%{$reset_color%}"
-  fi
-}
-
-needs_push() {
-  if [[ -n "$(git cherry -v origin/$(current_branch_name) 2>/dev/null)" ]]; then
-    echo " %{$fg[red]%}⬆%{$reset_color%} "
-  fi
-}
-
-current_branch_name() {
-  git rev-parse --abbrev-ref HEAD
-}
-
-git_dir() {
-  git rev-parse --git-dir 2>/dev/null
-}
+prompt_pure_setup "$@"
