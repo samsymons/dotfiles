@@ -19,6 +19,7 @@
 
 [core]
   excludesfile = ~/.gitignore
+  editor = /usr/bin/vim
 
 [fetch]
   prune = true
