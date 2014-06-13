@@ -12,6 +12,7 @@
   branches = branch -a --color -v
   co = checkout
   count = shortlog -sn --no-merges
+  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
   recent = shortlog --since=yesterday
   today = shortlog --since=midnight
 
