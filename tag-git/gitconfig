@@ -14,6 +14,7 @@
   ci = commit --verbose
   co = checkout
   dc = diff --cached
+  dd = difftool develop
   fa = fetch --all
   ff = merge --ff-only
   noff = merge --no-ff
