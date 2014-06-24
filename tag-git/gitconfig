@@ -9,12 +9,14 @@
 [alias]
   aa = add --all
   amend = commit --amend -C HEAD
+  b = branch
   branches = branch -a --color -v
+  ci = commit --verbose
   co = checkout
-  count = shortlog -sn --no-merges
-  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
-  recent = shortlog --since=yesterday
-  today = shortlog --since=midnight
+  dc = diff --cached
+  fa = fetch --all
+  ff = merge --ff-only
+  noff = merge --no-ff
 
 [apply]
   whitespace = warn
