@@ -75,6 +75,9 @@ set showmode                    " Show current mode down the bottom
 set splitbelow                  " Opens horizontal split below current window
 set splitright                  " Opens vertical split right of current window
 
+" set breakindent
+" set breakindentopt=shift:2
+
 " Search Settings
 " ===============
 
