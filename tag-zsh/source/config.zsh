@@ -15,6 +15,8 @@ setopt IGNORE_EOF
 
 setopt complete_aliases
 
+bindkey -v
+
 # Configure Terminal to open new tabs in the current directory
 precmd () {print -Pn "\e]2; %~/ \a"}
 preexec () {print -Pn "\e]2; %~/ \a"}
