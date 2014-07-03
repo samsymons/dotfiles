@@ -7,18 +7,18 @@ export CAPP_BUILD="/Users/samsymons/Code/Cortex/Air Forms/Build"
 export DOTFILES=$HOME/Code/Dotfiles
 export PROJECTS=$HOME/Code
 
-# source every .zsh file in this rep
+# Source every .zsh file in this rep
 for config_file ($DOTFILES/**/source/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
-# initialize autocomplete here, otherwise functions won't be loaded
+# Initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
 
-# load every completion after autocomplete loads
+# Load every completion after autocomplete loads
 for config_file ($DOTFILES/**/source/completion.zsh) source $config_file
 
-# added by travis gem
+# Travis configuration
 [ -f /Users/samsymons/.travis/travis.sh ] && source /Users/samsymons/.travis/travis.sh
 
-### Added by the Heroku Toolbelt
+# Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
