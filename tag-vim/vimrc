@@ -166,6 +166,11 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 let g:rspec_command = '!spring rspec {spec}'
 
+" CTags
+" =====
+
+map <Leader>ct :!ctags -R .<CR>
+
 " Fix Delays
 " ==========
 
