@@ -41,7 +41,7 @@ Plugin 'vim-scripts/tComment'
 syntax on
 syntax enable
 set t_Co=256
-set background=dark
+set background=light
 colorscheme solarized
 
 " General Config
@@ -139,8 +139,8 @@ set sidescroll=1
 " Colors
 " ======
 
-highlight LineNr ctermbg=8 ctermfg=0
-highlight VertSplit ctermbg=0 ctermfg=0
+" highlight LineNr ctermbg=8 ctermfg=0
+" highlight VertSplit ctermbg=0 ctermfg=0
 
 " Airline
 " =======
