@@ -9,6 +9,7 @@ alias gs="git status -s -b"
 alias gp="git pull --rebase && git push"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit"
 alias gm="git branch --merged | grep -v '\*'"
+alias gpr="git pull-request -b develop"
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate"
