@@ -11,13 +11,9 @@
   amend = commit --amend -C HEAD
   b = branch
   branches = branch -a --color -v
-  ci = commit --verbose
   co = checkout
   dc = diff --cached
   dd = difftool develop
-  fa = fetch --all
-  ff = merge --ff-only
-  noff = merge --no-ff
 
 [apply]
   whitespace = warn
