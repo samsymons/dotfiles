@@ -28,9 +28,6 @@
 [push]
   default = tracking
 
-[pull]
-  rebase = true
-
 [hub]
   protocol = https
 
