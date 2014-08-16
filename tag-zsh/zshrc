@@ -9,6 +9,8 @@ export PROJECTS=$HOME/Code
 # Source every .zsh file in this rep
 for config_file ($DOTFILES/**/source/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
+fpath=(~/.zsh/completion $fpath)
+
 # Initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
