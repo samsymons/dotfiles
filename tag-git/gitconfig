@@ -2,6 +2,9 @@
   name = Sam Symons
   email = sam@samsymons.com
 
+[init]
+  templatedir = ~/.git_template
+
 [color]
   ui = true
   wtf = true
