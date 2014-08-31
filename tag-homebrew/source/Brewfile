@@ -1,5 +1,6 @@
-install ansible
+install boot2docker
 install chisel
+install docker
 install grc
 install hub
 install reattach-to-user-namespace
