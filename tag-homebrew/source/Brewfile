@@ -8,7 +8,6 @@ install reattach-to-user-namespace
 install the_silver_searcher
 install tmux
 install tree
-install wget
 install xctool
 install zsh
 
