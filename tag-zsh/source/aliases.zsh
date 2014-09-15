@@ -3,6 +3,8 @@ alias reload='. ~/.zshrc'
 alias reload!='rcup -d .dotfiles -v; . ~/.zshrc'
 
 alias tmux="TERM=screen-256color-bce tmux"
+alias mkdir='mkdir -p'
+alias ...='../..'
 
 # Git
 alias gs="git status -s -b"
@@ -12,3 +14,6 @@ alias gpr="git pull-request -b develop"
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate"
+alias m="migrate"
+alias rk="rake"
+alias s="rspec"
