@@ -17,6 +17,7 @@
   co = checkout
   dc = diff --cached
   dd = difftool develop
+  adeleted = !sh -c 'git rm `git ls-files --deleted`'
 
 [apply]
   whitespace = warn
