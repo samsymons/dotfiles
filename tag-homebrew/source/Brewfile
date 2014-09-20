@@ -3,7 +3,6 @@ install chisel
 install docker
 install grc
 install hub
-install mobile-shell
 install reattach-to-user-namespace
 install the_silver_searcher
 install tmux
