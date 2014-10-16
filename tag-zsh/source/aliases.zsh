@@ -13,7 +13,8 @@ alias gm="git branch --merged | grep -v '\*'"
 alias gpr="git pull-request -b develop"
 
 # Rails
-alias migrate="rake db:migrate db:rollback && rake db:migrate"
+alias be="bundle exec"
 alias m="migrate"
+alias migrate="rake db:migrate db:rollback && rake db:migrate"
 alias rk="rake"
 alias s="rspec"
