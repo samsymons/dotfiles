@@ -58,6 +58,7 @@ let mapleader=','
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
+nnoremap <CR> o<Esc>
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
