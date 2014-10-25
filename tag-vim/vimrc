@@ -76,7 +76,6 @@ set history=1000                " Store lots of :cmdline history
 set laststatus=2                " Always show status line
 set lazyredraw
 set number
-set number                      " Line numbers are good
 set relativenumber
 set showcmd                     " Show incomplete cmds down the bottom
 set showmode                    " Show current mode down the bottom
@@ -101,8 +100,6 @@ set viminfo='100,f1  " Save up to 100 marks, enable capital marks
 set noswapfile
 set nobackup
 set nowritebackup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Indentation and Display
 " =======================
