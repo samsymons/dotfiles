@@ -1,8 +1,8 @@
 install boot2docker
 install chisel
 install docker
+install gh
 install grc
-install hub
 install reattach-to-user-namespace
 install the_silver_searcher
 install tmux
