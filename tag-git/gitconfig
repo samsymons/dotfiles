@@ -32,9 +32,6 @@
 [push]
   default = tracking
 
-[hub]
-  protocol = https
-
 [github]
   user = samsymons
 
