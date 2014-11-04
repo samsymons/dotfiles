@@ -1,4 +1,3 @@
-install boot2docker
 install chisel
 install docker
 install gh
