@@ -6,6 +6,10 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias mkdir='mkdir -p'
 alias ...='../..'
 
+# Vim
+
+alias vundle="vim +PluginUpdate"
+
 # Git
 alias gs="git status -s -b"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit"
