@@ -141,12 +141,6 @@ set scrolloff=10
 set sidescrolloff=15
 set sidescroll=1
 
-" Colors
-" ======
-
-" highlight LineNr ctermbg=8 ctermfg=0
-" highlight VertSplit ctermbg=0 ctermfg=0
-
 " Airline
 " =======
 
