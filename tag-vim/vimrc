@@ -169,6 +169,9 @@ let g:rspec_command = '!spring rspec {spec}'
 
 map <Leader>ct :!ctags -R .<CR>
 
+set textwidth=80
+set colorcolumn=+1
+
 " Fix Delays
 " ==========
 
