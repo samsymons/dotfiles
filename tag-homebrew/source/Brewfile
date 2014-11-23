@@ -1,5 +1,6 @@
 install chisel
 install docker
+install flow
 install gh
 install grc
 install reattach-to-user-namespace
