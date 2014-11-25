@@ -2,6 +2,7 @@ install chisel
 install docker
 install flow
 install gh
+install git-extras
 install grc
 install reattach-to-user-namespace
 install the_silver_searcher
