@@ -65,6 +65,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 command W w
+command Q q
 
 set autoread                    " Reload files changed outside vim
 set backspace=indent,eol,start  " Allow backspace in insert mode
@@ -110,8 +111,8 @@ set expandtab
 filetype plugin on
 filetype indent on
 
-set nowrap                            " Don't wrap lines
-set linebreak                         " Wrap lines at convenient points
+set nowrap              " Don't wrap lines
+set linebreak           " Wrap lines at convenient points
 
 " Folds
 " =====
