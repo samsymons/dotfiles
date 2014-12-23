@@ -1,3 +1,4 @@
+install carthage
 install chisel
 install docker
 install flow
