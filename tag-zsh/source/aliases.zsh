@@ -1,6 +1,7 @@
 alias l='ls -lhoAF'
 alias reload='. ~/.zshrc'
 alias reload!='rcup -d .dotfiles -v; . ~/.zshrc'
+alias path="echo $PATH | tr -s ':' '\n'"
 
 alias tmux="TERM=screen-256color-bce tmux"
 alias mkdir='mkdir -p'
