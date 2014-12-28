@@ -10,7 +10,6 @@ alias ...='../..'
 alias nis='npm install --save'
 
 # Git
-alias gs="git status -s -b"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit"
 alias gm="git branch --merged | grep -v '\*'"
 alias gpr="git pull-request -b develop"
