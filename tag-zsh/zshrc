@@ -1,5 +1,6 @@
 export PATH="$HOME/.dotfiles/bin:./bin:/usr/local/bin:$HOME/.rbenv:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin"
 export PATH="/usr/local/narwhal/bin:$PATH"
+export PATH="/usr/local/heroku/bin:$PATH"
 export CAPP_BUILD="/Users/samsymons/Code/Cortex/Air Forms/Build"
 
 export DOTFILES=$HOME/Code/Dotfiles
@@ -27,6 +28,3 @@ for config_file ($DOTFILES/**/source/completion.zsh) source $config_file
 
 # Travis configuration
 [ -f /Users/samsymons/.travis/travis.sh ] && source /Users/samsymons/.travis/travis.sh
-
-# Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
