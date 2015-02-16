@@ -1,14 +1,18 @@
+install binutils
 install carthage
 install chisel
 install docker
 install flow
+install gdb
 install gh
 install git-extras
 install grc
+install radare2
 install reattach-to-user-namespace
 install the_silver_searcher
 install tmux
 install tree
+install wireshark
 install xctool
 install zsh
 
