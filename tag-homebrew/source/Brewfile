@@ -7,11 +7,13 @@ install gdb
 install gh
 install git-extras
 install grc
+install mutt
 install radare2
 install reattach-to-user-namespace
 install the_silver_searcher
 install tmux
 install tree
+install weechat
 install wireshark
 install xctool
 install zsh
