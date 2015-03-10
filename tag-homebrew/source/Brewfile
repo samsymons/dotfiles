@@ -8,6 +8,7 @@ install gh
 install git-extras
 install grc
 install mutt
+install pick
 install radare2
 install reattach-to-user-namespace
 install the_silver_searcher
