@@ -9,6 +9,7 @@ install git-extras
 install grc
 install mutt
 install nasm
+install nmap
 install pick
 install radare2
 install reattach-to-user-namespace
