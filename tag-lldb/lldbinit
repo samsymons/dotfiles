@@ -1,6 +1,6 @@
 command script import /usr/local/Cellar/chisel/1.1.0/libexec/fblldb.py
 
-target.x86-disassembly-flavor
+target.x86-disassembly-flavor intel
 
 # Breakpoint aliases
 command alias b breakpoint set
