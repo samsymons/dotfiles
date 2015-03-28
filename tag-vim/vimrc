@@ -6,7 +6,7 @@ call vundle#rc()
 
 runtime macros/matchit.vim
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
