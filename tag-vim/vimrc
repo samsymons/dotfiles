@@ -85,7 +85,7 @@ set splitright                  " Opens vertical split right of current window
 " Git Config
 " ==========
 
-autocmd FileType gitcommit setlocal textwidth=72
+autocmd FileType gitcommit setlocal textwidth=80
 autocmd FileType gitcommit setlocal spell
 
 " Search Settings
