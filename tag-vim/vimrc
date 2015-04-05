@@ -84,6 +84,12 @@ set showmode                    " Show current mode down the bottom
 set splitbelow                  " Opens horizontal split below current window
 set splitright                  " Opens vertical split right of current window
 
+" General Shortcuts
+" =================
+
+nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+
 " Git Config
 " ==========
 
