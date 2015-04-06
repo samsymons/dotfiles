@@ -14,8 +14,14 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gm="git branch --merged | grep -v '\*'"
 alias gpr="git pull-request -b develop"
 
+# iOS
+
+alias pi="pod install"
+alias po="pod outdated"
+
 # Rails
 alias be="bundle exec"
+alias bo="bundle oudated"
 alias m="migrate"
 alias migrate="rake db:migrate db:rollback && rake db:migrate"
 alias rk="rake"
