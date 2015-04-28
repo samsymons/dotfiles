@@ -1,7 +1,9 @@
 install binutils
+install bison
 install carthage
 install chisel
 install docker
+install flex
 install flow
 install gdb
 install gh
