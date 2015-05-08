@@ -14,6 +14,7 @@ install nmap
 install pick
 install radare2
 install reattach-to-user-namespace
+install rust
 install the_silver_searcher
 install tmux
 install tree
