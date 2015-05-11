@@ -1,6 +1,7 @@
 log
 tags
 tmp
+public
 .git
 .xcodeproj
 .xcworkspace
