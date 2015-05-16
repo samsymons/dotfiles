@@ -7,3 +7,5 @@ command alias b breakpoint set
 command alias bd breakpoint disable
 command alias be breakpoint enable
 command alias bdel breakpoint delete
+command alias uikit expr @import UIKit
+command alias foundation expr @import Foundation
