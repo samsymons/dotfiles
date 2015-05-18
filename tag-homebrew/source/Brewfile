@@ -18,6 +18,7 @@ install rust
 install the_silver_searcher
 install tmux
 install tree
+install wireshark
 install xctool
 install zsh
 
