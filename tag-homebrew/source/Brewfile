@@ -1,5 +1,6 @@
 install binutils
 install bison
+install boot2docker
 install carthage
 install chisel
 install docker
