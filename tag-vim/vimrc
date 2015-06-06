@@ -60,6 +60,9 @@ colorscheme solarized
 let mapleader=','
 
 nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+
 nnoremap j gj
 nnoremap k gk
 nnoremap <CR> o<Esc>
