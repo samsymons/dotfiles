@@ -4,6 +4,7 @@ install boot2docker
 install carthage
 install chisel
 install docker
+install dsniff
 install flex
 install flow
 install gdb
