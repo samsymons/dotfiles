@@ -13,6 +13,7 @@ install git-extras
 install grc
 install nasm
 install nmap
+install openssl
 install pick
 install radare2
 install reattach-to-user-namespace
