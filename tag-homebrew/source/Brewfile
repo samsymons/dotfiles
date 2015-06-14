@@ -1,3 +1,4 @@
+install afl-fuzz
 install binutils
 install bison
 install boot2docker
@@ -13,6 +14,7 @@ install git-extras
 install grc
 install nasm
 install nmap
+install openssl
 install openssl
 install pick
 install radare2
