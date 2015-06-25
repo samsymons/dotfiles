@@ -1,3 +1,3 @@
 EXCLUDES="README.md source"
 DOTFILES_DIRS="~/Code/Dotfiles"
-TAGS="radare zsh git vim lldb ruby ghc tmux ctags curl homebrew postgres"
+TAGS="gdb radare zsh git vim lldb ruby ghc tmux ctags curl homebrew postgres"
