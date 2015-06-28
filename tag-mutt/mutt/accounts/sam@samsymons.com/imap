@@ -1,0 +1,5 @@
+set imap_user="sam@samsymons.com"
+set folder='imaps://sam@samsymons.com@mail.hover.com/INBOX'
+set spoolfile='imaps://sam@samsymons.com@mail.hover.com/INBOX'
+set record='+'
+set postponed="+Drafts"
