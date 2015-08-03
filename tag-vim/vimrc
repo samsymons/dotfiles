@@ -51,7 +51,7 @@ Plugin 'vim-scripts/ctags.vim'
 syntax on
 syntax enable
 set t_Co=256
-set background=light
+set background=dark
 let g:solarized_termtrans = 1
 colorscheme solarized
 
