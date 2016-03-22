@@ -6,6 +6,8 @@ alias path="echo $PATH | tr -s ':' '\n'"
 alias tmux="TERM=screen-256color-bce tmux"
 alias mkdir='mkdir -p'
 
+alias vf='vim $(fzf)'
+
 # Git
 alias gs="git status"
 alias gd="git diff --cached"
