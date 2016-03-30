@@ -1,5 +1,7 @@
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
 
 fpath=($ZSH/zsh/completions/src $ZSH/zsh/functions $fpath)
 
