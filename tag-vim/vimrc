@@ -10,13 +10,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'cespare/vim-toml'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'justinmk/vim-syntax-extra'
+Plugin 'keith/swift.vim'
 Plugin 'othree/html5.vim'
 Plugin 'rking/ag.vim'
 Plugin 'rust-lang/rust.vim'
@@ -41,10 +39,8 @@ Plugin 'vim-scripts/ctags.vim'
 " Syntax
 " ======
 
-syntax on
 syntax enable
 colorscheme solarized
-set t_Co=256
 set background=dark
 let g:solarized_termtrans = 1
 
@@ -84,6 +80,59 @@ set splitbelow                  " Opens horizontal split below current window
 set splitright                  " Opens vertical split right of current window
 set updatetime=1000
 
+" Colors
+" ======
+
+let g:gitgutter_override_sign_column_highlight = 0
+
+hi! link Visual CursorLine
+hi LineNr ctermbg=NONE
+hi CursorLine ctermfg=White
+hi SignColumn ctermbg=NONE
+
+hi clear StatusLine
+hi clear StatusLineNC
+hi StatusLine   term=bold cterm=bold ctermfg=White ctermbg=Black
+hi StatusLineNC term=bold cterm=bold ctermfg=White ctermbg=Black
+
+hi User1                      ctermfg=4          guifg=#40ffff            ctermbg=Black   " Identifier
+hi User2                      ctermfg=2 gui=bold guifg=#ffff60            ctermbg=Black   " Statement
+hi User3 term=bold cterm=bold ctermfg=1          guifg=White   guibg=Red  ctermbg=Black   " Error
+hi User4                      ctermfg=1          guifg=Orange             ctermbg=Black   " Special
+hi User5                      ctermfg=10         guifg=#80a0ff            ctermbg=Black   " Comment
+hi User6 term=bold cterm=bold ctermfg=1          guifg=Red                ctermbg=Black   " WarningMsg
+
+" Status Line
+" ===========
+
+function! TrailingSpaceWarning()
+  if !exists("b:statline_trailing_space_warning")
+    let lineno = search('\s$', 'nw')
+    if lineno != 0
+      let b:statline_trailing_space_warning = '[Trailing: '.lineno.']'
+    else
+      let b:statline_trailing_space_warning = ''
+    endif
+  endif
+  return b:statline_trailing_space_warning
+endfunction
+
+set statusline=
+set statusline+=%6*%m%r%*                          " modified, readonly
+set statusline+=\ 
+set statusline+=%5*%{expand('%:h')}/               " relative path to file's directory
+set statusline+=%1*%t%*                            " file name
+set statusline+=\ 
+set statusline+=\ 
+set statusline+=%3*%{TrailingSpaceWarning()}%*     " trailing whitespace
+
+set statusline+=%=                                 " switch to RHS
+
+set statusline+=\ 
+set statusline+=\ 
+set statusline+=%5*%L\ lines%*                     " number of lines
+set statusline+=\ 
+
 " General Shortcuts
 " =================
 
@@ -122,6 +171,7 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+set numberwidth=4
 
 filetype plugin on
 filetype indent on
@@ -151,11 +201,6 @@ set scrolloff=10
 set sidescrolloff=15
 set sidescroll=1
 
-" Airline
-" =======
-
-let g:airline_powerline_fonts = 1
-
 " CtrlP
 " =====
 
@@ -179,9 +224,6 @@ let g:rspec_command = '!spring rspec {spec}'
 " =====
 
 map <Leader>ct :!ctags -R .<CR>
-
-set textwidth=80
-set colorcolumn=+1
 
 " Fix Delays
 " ==========

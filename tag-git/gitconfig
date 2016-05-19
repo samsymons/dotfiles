@@ -1,6 +1,7 @@
 [user]
   name = Sam Symons
   email = sam@samsymons.com
+	signingkey = 6BE4F46B
 
 [init]
   templatedir = ~/.git_template
