@@ -41,7 +41,7 @@ Plugin 'vim-scripts/ctags.vim'
 
 syntax enable
 colorscheme solarized
-set background=dark
+set background=light
 set t_Co=256
 let g:solarized_termtrans = 1
 
@@ -93,15 +93,15 @@ hi SignColumn ctermbg=NONE
 
 hi clear StatusLine
 hi clear StatusLineNC
-hi StatusLine   term=bold cterm=bold ctermfg=White ctermbg=Black
-hi StatusLineNC term=bold cterm=bold ctermfg=White ctermbg=Black
+hi StatusLine   term=bold cterm=bold ctermfg=Brown ctermbg=LightGray
+hi StatusLineNC term=bold cterm=bold ctermfg=Brown ctermbg=LightGray
 
-hi User1                      ctermfg=4          guifg=#40ffff            ctermbg=Black   " Identifier
-hi User2                      ctermfg=2 gui=bold guifg=#ffff60            ctermbg=Black   " Statement
-hi User3 term=bold cterm=bold ctermfg=1          guifg=White   guibg=Red  ctermbg=Black   " Error
-hi User4                      ctermfg=1          guifg=Orange             ctermbg=Black   " Special
-hi User5                      ctermfg=10         guifg=#80a0ff            ctermbg=Black   " Comment
-hi User6 term=bold cterm=bold ctermfg=1          guifg=Red                ctermbg=Black   " WarningMsg
+hi User1                      ctermfg=4          guifg=#40ffff            ctermbg=LightGray   " Identifier
+hi User2                      ctermfg=2 gui=bold guifg=#ffff60            ctermbg=LightGray   " Statement
+hi User3 term=bold cterm=bold ctermfg=1          guifg=White   guibg=Red  ctermbg=LightGray   " Error
+hi User4                      ctermfg=1          guifg=Orange             ctermbg=LightGray   " Special
+hi User5                      ctermfg=10         guifg=#80a0ff            ctermbg=LightGray   " Comment
+hi User6 term=bold cterm=bold ctermfg=1          guifg=Red                ctermbg=LightGray   " WarningMsg
 
 " Status Line
 " ===========
