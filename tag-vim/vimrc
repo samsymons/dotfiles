@@ -41,7 +41,7 @@ Plugin 'vim-scripts/ctags.vim'
 
 syntax enable
 colorscheme solarized
-set background=light
+set background=dark
 set t_Co=256
 let g:solarized_termtrans = 1
 
@@ -93,39 +93,24 @@ hi SignColumn ctermbg=NONE
 
 hi clear StatusLine
 hi clear StatusLineNC
-hi StatusLine   term=bold cterm=bold ctermfg=Brown ctermbg=LightGray
-hi StatusLineNC term=bold cterm=bold ctermfg=Brown ctermbg=LightGray
+hi StatusLine   term=bold cterm=bold ctermfg=Brown ctermbg=Black
+hi StatusLineNC term=bold cterm=bold ctermfg=Brown ctermbg=Black
 
-hi User1                      ctermfg=4          guifg=#40ffff            ctermbg=LightGray   " Identifier
-hi User2                      ctermfg=2 gui=bold guifg=#ffff60            ctermbg=LightGray   " Statement
-hi User3 term=bold cterm=bold ctermfg=1          guifg=White   guibg=Red  ctermbg=LightGray   " Error
-hi User4                      ctermfg=1          guifg=Orange             ctermbg=LightGray   " Special
-hi User5                      ctermfg=10         guifg=#80a0ff            ctermbg=LightGray   " Comment
-hi User6 term=bold cterm=bold ctermfg=1          guifg=Red                ctermbg=LightGray   " WarningMsg
+hi User1                      ctermfg=4          guifg=#40ffff            ctermbg=Black   " Identifier
+hi User2                      ctermfg=2 gui=bold guifg=#ffff60            ctermbg=Black   " Statement
+hi User3 term=bold cterm=bold ctermfg=1          guifg=White   guibg=Red  ctermbg=Black   " Error
+hi User4                      ctermfg=1          guifg=Orange             ctermbg=Black   " Special
+hi User5                      ctermfg=10         guifg=#80a0ff            ctermbg=Black   " Comment
+hi User6 term=bold cterm=bold ctermfg=1          guifg=Red                ctermbg=Black   " WarningMsg
 
 " Status Line
 " ===========
-
-function! TrailingSpaceWarning()
-  if !exists("b:statline_trailing_space_warning")
-    let lineno = search('\s$', 'nw')
-    if lineno != 0
-      let b:statline_trailing_space_warning = '[Trailing: '.lineno.']'
-    else
-      let b:statline_trailing_space_warning = ''
-    endif
-  endif
-  return b:statline_trailing_space_warning
-endfunction
 
 set statusline=
 set statusline+=%6*%m%r%*                          " modified, readonly
 set statusline+=\ 
 set statusline+=%5*%{expand('%:h')}/               " relative path to file's directory
 set statusline+=%1*%t%*                            " file name
-set statusline+=\ 
-set statusline+=\ 
-set statusline+=%3*%{TrailingSpaceWarning()}%*     " trailing whitespace
 
 set statusline+=%=                                 " switch to RHS
 
@@ -197,7 +182,6 @@ set wildignore+=*vim/backups*
 " Scrolling
 " =========
 
-" Start scrolling when we're getting close to margins
 set scrolloff=10
 set sidescrolloff=15
 set sidescroll=1
@@ -211,20 +195,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" vim-rspec
-" =========
-
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
 let g:rspec_command = '!spring rspec {spec}'
-
-" CTags
-" =====
-
-map <Leader>ct :!ctags -R .<CR>
 
 " Fix Delays
 " ==========
