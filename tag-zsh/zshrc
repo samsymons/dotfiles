@@ -1,6 +1,7 @@
 export PATH="$HOME/.dotfiles/bin:./bin:/usr/local/bin:$HOME/.rbenv:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin"
 export PATH="/usr/local/narwhal/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="/Library/Developer/Toolchains:$PATH"
 
 export GOPATH="$HOME/Code/Go"
 
