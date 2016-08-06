@@ -1,9 +1,5 @@
-export PATH="$HOME/.dotfiles/bin:./bin:/usr/local/bin:$HOME/.rbenv:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.cabal/bin"
-export PATH="/usr/local/narwhal/bin:$PATH"
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/.dotfiles/bin:./bin:/usr/local/bin:$HOME/.rbenv:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/Library/Developer/Toolchains:$PATH"
-
-export GOPATH="$HOME/Code/Go"
 
 export DOTFILES=$HOME/Code/Dotfiles
 export PROJECTS=$HOME/Code
@@ -30,6 +26,3 @@ unsetopt flowcontrol
 
 # Load every completion after autocomplete loads
 for config_file ($DOTFILES/**/source/completion.zsh) source $config_file
-
-# Travis configuration
-[ -f /Users/samsymons/.travis/travis.sh ] && source /Users/samsymons/.travis/travis.sh

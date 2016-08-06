@@ -175,8 +175,8 @@ set nofoldenable        " Don't fold by default
 " ==========
 
 set wildmode=longest,list,full
-set wildmenu                    " Enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~     " Stuff to ignore when tab completing
+set wildmenu                        " Enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~,*.a     " Stuff to ignore when tab completing
 set wildignore+=*vim/backups*
 
 " Scrolling
@@ -194,8 +194,6 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
   let g:ctrlp_use_caching = 0
 endif
-
-let g:rspec_command = '!spring rspec {spec}'
 
 " Fix Delays
 " ==========
