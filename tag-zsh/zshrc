@@ -26,3 +26,5 @@ unsetopt flowcontrol
 
 # Load every completion after autocomplete loads
 for config_file ($DOTFILES/**/source/completion.zsh) source $config_file
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
