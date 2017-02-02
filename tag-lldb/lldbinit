@@ -9,3 +9,6 @@ command alias be breakpoint enable
 command alias bdel breakpoint delete
 command alias uikit expr @import UIKit
 command alias foundation expr @import Foundation
+
+# Reveal
+command script import /Applications/Reveal.app/Contents/SharedSupport/Scripts/RevealServerCommands.py

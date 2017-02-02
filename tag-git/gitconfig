@@ -1,7 +1,12 @@
 [user]
   name = Sam Symons
   email = sam@samsymons.com
-	signingkey = 6BE4F46B
+  signingkey = 6BE4F46B
+
+[url "git@github.paypal.com:"]
+    insteadOf = https://github.paypal.com/
+[url "git@github.paypal.com:"]
+    pushInsteadOf = "https://github.paypal.com/"
 
 [color]
   ui = true
@@ -56,9 +61,11 @@
   tool = Kaleidoscope
 
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[http]
+  sslVerify = false
