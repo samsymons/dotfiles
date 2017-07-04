@@ -1,7 +1,7 @@
 [user]
   name = Sam Symons
   email = sam@samsymons.com
-  signingkey = 6BE4F46B
+  signingkey = F9B3AB91078D00B0
 
 [url "git@github.paypal.com:"]
     insteadOf = https://github.paypal.com/
@@ -37,9 +37,6 @@
 [push]
   default = tracking
 
-[github]
-  user = samsymons
-
 [difftool]
   prompt = false
 
@@ -71,3 +68,5 @@
 
 [http]
   sslVerify = false
+[gpg]
+	program = /usr/local/bin/gpg2
