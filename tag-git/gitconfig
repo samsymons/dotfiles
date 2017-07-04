@@ -2,6 +2,10 @@
   name = Sam Symons
   email = sam@samsymons.com
   signingkey = F9B3AB91078D00B0
+[includeIf "gitdir:~/Code/Work"]
+    path = .gitconfig.work
+[includeIf "gitdir:~/Code/Projects"]
+    path = .gitconfig.personal
 
 [url "git@github.paypal.com:"]
     insteadOf = https://github.paypal.com/
