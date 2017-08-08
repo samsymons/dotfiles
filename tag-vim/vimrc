@@ -7,9 +7,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'iCyMind/NeoSolarized'
 Plug 'jgdavey/tslime.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
@@ -28,7 +28,7 @@ Plug 'vim-ruby/vim-ruby'
 " ======
 
 syntax enable
-colorscheme NeoSolarized
+colorscheme flattened_dark
 set background=dark
 set t_Co=256
 let g:solarized_termtrans = 1
@@ -41,6 +41,7 @@ let mapleader=','
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <C-p> :FZF<CR>
 
 nnoremap j gj
 nnoremap k gk
