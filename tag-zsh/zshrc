@@ -8,6 +8,10 @@ export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib
 
 export MACOSX_DEPLOYMENT_TARGET=10.9
 
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
+
 # Source every .zsh file in this rep
 for config_file ($DOTFILES/**/source/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
