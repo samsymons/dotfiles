@@ -2,13 +2,13 @@ filetype off
 
 runtime macros/matchit.vim
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
-Plug 'iCyMind/NeoSolarized'
 Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'iCyMind/NeoSolarized'
 Plug 'jgdavey/tslime.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/syntastic'
@@ -22,6 +22,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'vim-ruby/vim-ruby'
 
 " Syntax
 " ======
