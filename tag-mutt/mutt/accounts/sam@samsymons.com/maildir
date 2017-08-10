@@ -1,6 +1,0 @@
-set mbox_type=Maildir
-set folder = '~/Mail/sam@samsymons.com'
-set mbox='~/Mail/sam@samsymons.com'
-set spoolfile='~/Mail/sam@samsymons.com/INBOX'
-set record='~/Mail/sam@samsymons.com/INBOX'
-set postponed='~/Mail/sam@samsymons.com/Drafts'

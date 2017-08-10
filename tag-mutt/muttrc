@@ -1,9 +1,0 @@
-# Config for Mutt.
-
-source ~/.mutt/config/base
-source ~/.mutt/config/appearance
-
-source ~/.mutt/accounts/sam@samsymons.com/imap
-source ~/.mutt/accounts/sam@samsymons.com/ident
-source ~/.mutt/accounts/sam@samsymons.com/smtp
-source ~/.mutt/accounts/sam@samsymons.com/mailboxes
