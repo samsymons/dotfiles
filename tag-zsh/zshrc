@@ -1,4 +1,4 @@
-export PATH="$HOME/.dotfiles/bin:/Usr/local/Cellar:/bin:/usr/local/bin:$HOME/.rbenv:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.dotfiles/bin:/usr/local/Cellar:/bin:/usr/local/bin:$HOME/.rbenv:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/Library/Developer/Toolchains:$PATH"
 

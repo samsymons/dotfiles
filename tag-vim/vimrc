@@ -2,7 +2,6 @@ runtime macros/matchit.vim
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jgdavey/tslime.vim'
@@ -21,6 +20,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
+
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.py --clang-completer
+  endif
+endfunction
+Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp'], 'do': function('BuildYCM') }
 
 call plug#end()
 
