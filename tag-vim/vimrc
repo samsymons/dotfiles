@@ -3,7 +3,9 @@ runtime macros/matchit.vim
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'arcticicestudio/nord-vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'itchyny/lightline.vim'
 Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -33,10 +35,8 @@ call plug#end()
 " Syntax
 " ======
 
-colorscheme flattened_dark
 set background=dark
 set t_Co=256
-let g:solarized_termtrans = 1
 
 " General Config
 " ==============
@@ -44,8 +44,6 @@ let g:solarized_termtrans = 1
 let mapleader=','
 
 nnoremap <leader><space> :nohlsearch<CR>
-nnoremap <Leader>o :CtrlP<CR>
-nnoremap <Leader>w :w<CR>
 nnoremap <C-p> :FZF<CR>
 
 nnoremap j gj
@@ -78,7 +76,13 @@ set updatetime=1000
 " Colors
 " ======
 
+colorscheme nord
+
 let g:gitgutter_override_sign_column_highlight = 0
+
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
 
 hi! link Visual CursorLine
 hi LineNr ctermbg=NONE

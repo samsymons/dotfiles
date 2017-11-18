@@ -1,12 +1,17 @@
 export PATH="$HOME/.dotfiles/bin:/usr/local/Cellar:/bin:/usr/local/bin:$HOME/.rbenv:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/Library/Developer/Toolchains:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH" # Use Homebrew's LLVM installation for an up-to-date clang
 
 export DOTFILES=$HOME/Code/Projects/Dotfiles
 export PROJECTS=$HOME/Code/Projects
 export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
 export MACOSX_DEPLOYMENT_TARGET=10.9
+export CC=/usr/local/opt/llvm/bin/clang
+export CXX=/usr/local/opt/llvm/clang++
+
+NEWLINE=$'\n'
+PROMPT="${NEWLINE}› "
 
 # Source every .zsh file in this rep
 for config_file ($DOTFILES/**/source/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
