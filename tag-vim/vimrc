@@ -79,49 +79,7 @@ set updatetime=1000
 colorscheme nord
 
 let g:gitgutter_override_sign_column_highlight = 0
-
-let g:lightline = {
-      \ 'colorscheme': 'nord',
-      \ }
-
-hi! link Visual CursorLine
-hi LineNr ctermbg=NONE
-hi CursorLine ctermfg=White
-hi SignColumn ctermbg=NONE
-
-hi clear StatusLine
-hi clear StatusLineNC
-hi StatusLine   term=bold cterm=bold ctermfg=Brown ctermbg=Black
-hi StatusLineNC term=bold cterm=bold ctermfg=Brown ctermbg=Black
-
-hi User1                      ctermfg=4          guifg=#40ffff            ctermbg=Black   " Identifier
-hi User2                      ctermfg=2 gui=bold guifg=#ffff60            ctermbg=Black   " Statement
-hi User3 term=bold cterm=bold ctermfg=1          guifg=White   guibg=Red  ctermbg=Black   " Error
-hi User4                      ctermfg=1          guifg=Orange             ctermbg=Black   " Special
-hi User5                      ctermfg=10         guifg=#80a0ff            ctermbg=Black   " Comment
-hi User6 term=bold cterm=bold ctermfg=1          guifg=Red                ctermbg=Black   " WarningMsg
-
-" Status Line
-" ===========
-
-set statusline=
-set statusline+=%6*%m%r%*                          " modified, readonly
-set statusline+=\ 
-set statusline+=%5*%{expand('%:h')}/               " relative path to file's directory
-set statusline+=%1*%t%*                            " file name
-
-set statusline+=%=                                 " switch to RHS
-
-set statusline+=\ 
-set statusline+=\ 
-set statusline+=%5*%L\ lines%*                     " number of lines
-set statusline+=\ 
-
-" General Shortcuts
-" =================
-
-nnoremap <leader>d :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
+set noshowmode
 
 " Git Config
 " ==========
@@ -158,13 +116,6 @@ set expandtab
 set numberwidth=4
 set nowrap
 
-" Folds
-" =====
-
-set foldmethod=indent   " Fold based on indent
-set foldnestmax=3       " Deepest fold is 3 levels
-set nofoldenable        " Don't fold by default
-
 " Completion
 " ==========
 
@@ -179,16 +130,4 @@ set wildignore+=*vim/backups*
 set scrolloff=10
 set sidescrolloff=15
 set sidescroll=1
-
-" Fix Delays
-" ==========
-
-if !has('gui_running')
-  set ttimeoutlen=10
-  augroup FastEscape
-    autocmd!
-    au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
-  augroup END
-endif
 
