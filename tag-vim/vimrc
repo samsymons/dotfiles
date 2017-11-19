@@ -3,7 +3,6 @@ runtime macros/matchit.vim
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'arcticicestudio/nord-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'itchyny/lightline.vim'
 Plug 'jgdavey/tslime.vim'
@@ -22,6 +21,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
+
+Plug '~/Code/Projects/vim-pacific'
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
@@ -92,7 +93,7 @@ set updatetime=1000
 " Colors
 " ======
 
-colorscheme nord
+colorscheme pacific
 
 let g:gitgutter_override_sign_column_highlight = 0
 set noshowmode
