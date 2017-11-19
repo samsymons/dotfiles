@@ -32,6 +32,15 @@ Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp'], 'do': function('BuildYCM')
 
 call plug#end()
 
+" Plugin Configuration
+" ===================
+
+let g:lightline = {
+      \ 'colorscheme': 'default',
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
+
 " Syntax
 " ======
 
