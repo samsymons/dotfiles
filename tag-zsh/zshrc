@@ -6,8 +6,8 @@ export PATH="$HOME/.dotfiles/bin:/usr/local/Cellar:/bin:/usr/local/bin:$HOME/.rb
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH" # Use Homebrew's LLVM installation for an up-to-date clang
 
-export DOT=$HOME/Code/Projects/Dotfiles
-export PROJ=$HOME/Code/Projects
+export DOTFILES=$HOME/Code/Projects/Dotfiles
+export PROJECTS=$HOME/Code/Projects
 export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
 # ==============================
@@ -29,25 +29,29 @@ PROMPT="${NEWLINE}› "
 # *** Load Configuration Files ***
 # ================================
 
+# Source every .zsh file in this rep
 for config_file ($DOTFILES/**/source/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
 
 fpath=(~/.zsh/completion $fpath)
 
+# Initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
 
+# Enable extended globbing
 setopt extendedglob
+
+# Allow [ or ] whereever you want
 unsetopt nomatch
+
 unsetopt flowcontrol
 
+# Load every completion after autocomplete loads
 for config_file ($DOTFILES/**/source/completion.zsh) source $config_file
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# ==============
-# *** Neovim ***
-# ==============
-
+# Use Neovim over Vim
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
-
