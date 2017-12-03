@@ -20,6 +20,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'vim-ruby/vim-ruby'
 
 Plug '~/Code/Projects/vim-pacific'
@@ -53,7 +54,9 @@ let g:lightline = {
 " ======
 
 set background=dark
-set t_Co=256
+set termguicolors
+let g:quantum_black=1
+colorscheme quantum
 
 " General Config
 " ==============
@@ -92,8 +95,6 @@ set updatetime=1000
 
 " Colors
 " ======
-
-colorscheme pacific
 
 let g:gitgutter_override_sign_column_highlight = 0
 set noshowmode
