@@ -10,6 +10,13 @@ export DOTFILES=$HOME/Code/Projects/Dotfiles
 export PROJECTS=$HOME/Code/Projects
 export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
+# ============
+# *** Node ***
+# ============
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # ==============================
 # *** Compiler Configuration ***
 # ==============================
