@@ -65,6 +65,7 @@ let mapleader=','
 
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <C-p> :FZF<CR>
+tnoremap <Esc> <C-\><C-n>
 
 nnoremap j gj
 nnoremap k gk
