@@ -28,11 +28,13 @@ brew "zsh"
 cask "atom"
 cask "google-chrome"
 cask "imageoptim"
+cask "numi"
 cask "paw"
 cask "reveal"
 cask "sketch"
 cask "spotify"
 cask "tower"
+cask "transmit"
 cask "visual-studio-code"
 
 mas "1Blocker", id: 1107421413
