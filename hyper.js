@@ -46,6 +46,5 @@ module.exports = {
     copyOnSelect: false
   },
 
-  plugins: ['hyper-statusline', 'hyper-ligatures'],
-  localPlugins: ['hyper-pacific'],
+  plugins: ['hyper-ligatures'],
 };
