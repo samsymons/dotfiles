@@ -63,8 +63,3 @@ fi
 NEWLINE=$'\n'
 PROMPT="${NEWLINE}› "
 
-source $DOTFILES/tag-zsh/source/antigen.zsh
-
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
-antigen apply
-
