@@ -23,15 +23,17 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'git' \
+  'homebrew' \
   'history' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
-  'contrib-prompt' \
-  'prompt' \
   'autosuggestions' \
-  'syntax-highlighting'
+  'syntax-highlighting' \
+  'contrib-prompt' \
+  'prompt'
 
 #
 # Editor
