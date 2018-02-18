@@ -57,15 +57,6 @@ if type nvim > /dev/null 2>&1; then
 fi
 
 # ===============
-# *** Antigen ***
-# ===============
-
-source /usr/local/share/antigen/antigen.zsh
-
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
-antigen apply
-
-# ===============
 # *** Plugins ***
 # ===============
 
@@ -83,3 +74,4 @@ NEWLINE=$'\n'
 PROMPT="${NEWLINE}› "
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
