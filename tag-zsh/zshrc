@@ -2,6 +2,14 @@
 # *** Dotfiles ***
 # ================
 
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# ============
+# *** Path ***
+# ============
+
 export PATH="$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/Cellar:/bin:$HOME/.rbenv:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH" # Use Homebrew's LLVM installation for an up-to-date clang
@@ -25,53 +33,10 @@ export MACOSX_DEPLOYMENT_TARGET=10.9
 export CC=/usr/local/opt/llvm/bin/clang
 export CXX=/usr/local/opt/llvm/clang++
 
-# ================================
-# *** Load Configuration Files ***
-# ================================
+# ==============
+# *** Neovim ***
+# ==============
 
-# Source every .zsh file in this repo
-for config_file ($DOTFILES/**/source/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || source $config_file
-
-fpath=(~/.zsh/completion $fpath)
-
-# Initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
-
-# Enable extended globbing
-setopt extendedglob
-
-# Allow [ or ] whereever you want
-unsetopt nomatch
-
-unsetopt flowcontrol
-
-# Load every completion after autocomplete loads
-for config_file ($DOTFILES/**/source/completion.zsh) source $config_file
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Use Neovim over Vim
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
-
-# ===============
-# *** Plugins ***
-# ===============
-
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
-
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-# ==============
-# *** Prompt ***
-# ==============
-
-NEWLINE=$'\n'
-PROMPT="${NEWLINE}› "
-
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-
