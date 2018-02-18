@@ -56,6 +56,12 @@ if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
 
+# ===============
+# *** Plugins ***
+# ===============
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # ==============
 # *** Prompt ***
 # ==============
@@ -63,3 +69,4 @@ fi
 NEWLINE=$'\n'
 PROMPT="${NEWLINE}› "
 
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
