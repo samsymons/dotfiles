@@ -35,6 +35,13 @@ export MACOSX_DEPLOYMENT_TARGET=10.9
 export CC=/usr/local/opt/llvm/bin/clang
 export CXX=/usr/local/opt/llvm/clang++
 
+# ===============
+# *** Aliases ***
+# ===============
+
+unalias gs
+alias gs='git status -sb'
+
 # ==============
 # *** Neovim ***
 # ==============
@@ -42,3 +49,5 @@ export CXX=/usr/local/opt/llvm/clang++
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
