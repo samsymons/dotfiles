@@ -1,4 +1,4 @@
-command script import /usr/local/Cellar/chisel/1.1.0/libexec/fblldb.py
+command script import /usr/local/opt/chisel/libexec/fblldb.py
 
 target.x86-disassembly-flavor intel
 
