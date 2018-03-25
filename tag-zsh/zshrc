@@ -31,7 +31,7 @@ export NVM_DIR="$HOME/.nvm"
 # *** Compiler Configuration ***
 # ==============================
 
-export MACOSX_DEPLOYMENT_TARGET=10.9
+# export MACOSX_DEPLOYMENT_TARGET=10.9
 export CC=/usr/local/opt/llvm/bin/clang
 export CXX=/usr/local/opt/llvm/bin/clang++
 
