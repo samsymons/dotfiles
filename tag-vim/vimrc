@@ -24,11 +24,9 @@ Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
 
-Plug '~/Code/Projects/vim-pacific'
-
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
-    !./install.py --clang-completer
+    !./install.py --clang-completer --rust-completer
   endif
 endfunction
 Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp'], 'do': function('BuildYCM') }
