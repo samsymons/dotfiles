@@ -11,6 +11,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'keith/swift.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'sjl/badwolf'
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
@@ -48,6 +49,8 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+
+map <C-n> :NERDTreeToggle<CR>
 
 " Syntax
 " ======
