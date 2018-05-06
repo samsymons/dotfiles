@@ -12,7 +12,7 @@ export KEYTIMEOUT=1
 # *** Path ***
 # ============
 
-export PATH="$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/Cellar:/bin:$HOME/.rbenv:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/Cellar:/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.cargo/bin:$PATH"
 # export PATH="/usr/local/opt/llvm/bin:$PATH" # Use Homebrew's LLVM installation for an up-to-date clang
 
