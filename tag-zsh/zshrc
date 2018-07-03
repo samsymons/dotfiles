@@ -57,3 +57,14 @@ fi
 # ================
 
 . /usr/local/anaconda3/etc/profile.d/conda.sh
+
+# ==============
+# *** chruby ***
+# ==============
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+source /usr/local/share/gem_home/gem_home.sh
+
+chruby 2.5.1
+
