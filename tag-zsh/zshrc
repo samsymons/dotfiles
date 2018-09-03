@@ -43,6 +43,7 @@ alias gs='git status -sb'
 
 alias update='brew update && rustup update'
 alias cat='bat'
+alias du="ncdu --color dark -rr -x --exclude .git"
 alias top="sudo htop"
 
 # ==============
