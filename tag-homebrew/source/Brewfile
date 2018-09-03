@@ -2,6 +2,7 @@ cask_args appdir: "/Applications"
 tap "caskroom/cask"
 
 brew "afl-fuzz"
+brew "bat"
 brew "binutils"
 brew "rbenv"
 brew "carthage"
