@@ -72,3 +72,6 @@ source /usr/local/share/gem_home/gem_home.sh
 
 chruby 2.5.1
 
+
+# added by travis gem
+[ -f /Users/samsymons/.travis/travis.sh ] && source /Users/samsymons/.travis/travis.sh
