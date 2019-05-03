@@ -9,6 +9,8 @@ Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'keith/swift.vim'
+Plug 'lervag/vimtex'
+Plug 'mhartington/oceanic-next'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
@@ -56,11 +58,9 @@ map <C-n> :NERDTreeToggle<CR>
 " Syntax
 " ======
 
-let g:badwolf_darkgutter = 1
-colorscheme goodwolf
-
-set background=dark
 set termguicolors
+syntax enable
+colorscheme OceanicNext
 
 " General Config
 " ==============
