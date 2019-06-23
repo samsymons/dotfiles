@@ -15,17 +15,20 @@ export KEYTIMEOUT=1
 export PATH="$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/Cellar:/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/kotlin-compiler/bin:$PATH"
+export PATH="/Library/TeX/texbin:$PATH"
+export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home:$PATH"
 
 export DOTFILES=$HOME/Code/Projects/Dotfiles
 export PROJECTS=$HOME/Code/Projects
 export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+export GOPATH=$HOME/Code/Go
 
 # ============
 # *** Node ***
 # ============
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # ==============================
 # *** Compiler Configuration ***
