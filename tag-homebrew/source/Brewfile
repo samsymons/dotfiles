@@ -2,7 +2,6 @@ cask_args appdir: "/Applications"
 tap "caskroom/cask"
 
 brew "afl-fuzz"
-brew "bat"
 brew "binutils"
 brew "rbenv"
 brew "carthage"
@@ -15,7 +14,6 @@ brew "git"
 brew "grc"
 brew "hugo"
 brew "htop"
-brew "mongodb"
 brew "mosh"
 brew "ncdu"
 brew "neovim"
@@ -23,11 +21,9 @@ brew "postgres"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
 brew "swiftlint"
-brew "tldr"
 brew "tmux"
 brew "tree"
 brew "wget"
-brew "yarn"
 brew "zsh"
 
 cask "atom"
@@ -45,7 +41,6 @@ cask "visual-studio-code"
 mas "1Blocker", id: 1107421413
 mas "Bear", id: 1091189122
 mas "Cardhop", id: 1290358394
-mas "Things3", id: 904280696
 mas "UlyssesMac", id: 1225570693
 mas "Xcode", id: 497799835
 mas "xScope", id: 889428659
