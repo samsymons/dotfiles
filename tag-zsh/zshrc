@@ -14,29 +14,9 @@ export KEYTIMEOUT=1
 
 export PATH="$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/Cellar:/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/kotlin-compiler/bin:$PATH"
 export PATH="/Library/TeX/texbin:$PATH"
-export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home:$PATH"
 
-export DOTFILES=$HOME/Code/Projects/Dotfiles
-export PROJECTS=$HOME/Code/Projects
 export RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
-export GOPATH=$HOME/Code/Go
-
-# ============
-# *** Node ***
-# ============
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# ==============================
-# *** Compiler Configuration ***
-# ==============================
-
-# export MACOSX_DEPLOYMENT_TARGET=10.9
-# export CC=/usr/local/opt/llvm/bin/clang
-# export CXX=/usr/local/opt/llvm/bin/clang++
 
 # ===============
 # *** Aliases ***
@@ -60,6 +40,14 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# ==============================
+# *** Compiler Configuration ***
+# ==============================
+
+# export MACOSX_DEPLOYMENT_TARGET=10.9
+# export CC=/usr/local/opt/llvm/bin/clang
+# export CXX=/usr/local/opt/llvm/bin/clang++
+
 # ================
 # *** Anaconda ***
 # ================
@@ -67,7 +55,7 @@ fi
 . /usr/local/anaconda3/etc/profile.d/conda.sh
 
 # ==============
-# *** chruby ***
+# *** Ruby ***
 # ==============
 
 source /usr/local/share/chruby/chruby.sh
@@ -76,6 +64,15 @@ source /usr/local/share/gem_home/gem_home.sh
 
 chruby 2.5.1
 
+# ============
+# *** Node ***
+# ============
 
-# added by travis gem
-[ -f /Users/samsymons/.travis/travis.sh ] && source /Users/samsymons/.travis/travis.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# ==============
+# *** Travis ***
+# ==============
+
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
