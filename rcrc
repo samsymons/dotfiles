@@ -1,3 +1,0 @@
-EXCLUDES="README.md source"
-DOTFILES_DIRS="~/Code/Dotfiles"
-TAGS="gdb zsh git vim lldb ruby ghc tmux homebrew"
