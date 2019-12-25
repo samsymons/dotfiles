@@ -39,12 +39,18 @@ brew install grep
 brew install openssh
 
 # Install other useful binaries.
-brew install ack
+brew install carthage
+brew install fd
+brew install fzf
 brew install git
 brew install git-lfs
-brew install rename
-brew install tree
 brew install rbenv
+brew install rename
+brew install reattach-to-user-namespace
+brew install ripgrep
+brew install swiftlint
+brew install tree
+brew install zsh
 
 # Remove outdated versions from the cellar.
 brew cleanup
