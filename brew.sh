@@ -44,6 +44,7 @@ brew install git
 brew install git-lfs
 brew install rename
 brew install tree
+brew install rbenv
 
 # Remove outdated versions from the cellar.
 brew cleanup
