@@ -2,20 +2,8 @@
 # General
 #
 
-# Set case-sensitivity for completion, history lookup, etc.
-# zstyle ':prezto:*:*' case-sensitive 'yes'
-
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
-
-# Add additional directories to load prezto modules from
-# zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
-
-# Set the Zsh modules to load (man zshmodules).
-# zstyle ':prezto:load' zmodule 'attr' 'stat'
-
-# Set the Zsh functions to load (man zshcontrib).
-# zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
@@ -32,7 +20,6 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'autosuggestions' \
   'syntax-highlighting' \
-  'contrib-prompt' \
   'prompt'
 
 #
@@ -73,7 +60,7 @@ zstyle ':prezto:module:prompt' pwd-length 'long'
 #
 
 # Set the SSH identities to load into the agent.
-zstyle ':prezto:module:ssh:load' identities 'github' 'digitalocean'
+zstyle ':prezto:module:ssh:load' identities 'github'
 
 #
 # Syntax Highlighting
@@ -103,24 +90,12 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 # Set the window title format.
 zstyle ':prezto:module:terminal:window-title' format '%n: %s'
 
-# Set the tab title format.
-# zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
-
 #
 # Tmux
 #
 
-# Auto start a session when Zsh is launched in a local terminal.
-zstyle ':prezto:module:tmux:auto-start' local 'yes'
-
-# Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:tmux:auto-start' remote 'yes'
-
 # Integrate with iTerm2.
 zstyle ':prezto:module:tmux:iterm' integrate 'yes'
-
-# Set the default session name:
-# zstyle ':prezto:module:tmux:session' name 'YOUR DEFAULT SESSION NAME'
 
 #
 # Utility
