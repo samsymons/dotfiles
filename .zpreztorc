@@ -52,7 +52,7 @@ zstyle ':prezto:module:history-substring-search' globbing-flags ''
 # Prompt
 #
 
-zstyle ':prezto:module:prompt' theme 'pure'
+zstyle ':prezto:module:prompt' theme 'paradox'
 zstyle ':prezto:module:prompt' pwd-length 'long'
 
 #
