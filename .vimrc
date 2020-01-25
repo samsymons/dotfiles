@@ -14,7 +14,6 @@ Plug 'mhartington/oceanic-next'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'sjl/badwolf'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
@@ -25,7 +24,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'vim-ruby/vim-ruby'
 Plug 'w0rp/ale'
 
 function! BuildYCM(info)
