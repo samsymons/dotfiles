@@ -8,7 +8,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'keith/swift.vim'
 Plug 'lervag/vimtex'
 Plug 'mhartington/oceanic-next'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
