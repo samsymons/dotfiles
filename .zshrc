@@ -20,6 +20,7 @@ export KEYTIMEOUT=1
 # ============
 
 export PATH="$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/Cellar:$HOME/.cargo/bin:/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/anaconda3/bin:$PATH"
 
 # ===============
 # *** Aliases ***
