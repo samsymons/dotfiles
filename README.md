@@ -4,10 +4,6 @@ Based off of the [excellent repo from Mathias Bynens](https://github.com/mathias
 
 ## Installation
 
-**Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
-
-### Using Git and the bootstrap script
-
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
@@ -26,7 +22,7 @@ Alternatively, to update while avoiding the confirmation prompt:
 set -- -f; source bootstrap.sh
 ```
 
-### Specify the `$PATH`
+## Specify the `$PATH`
 
 If `~/.path` exists, it will be sourced along with the other files, before any feature testing (such as [detecting which version of `ls` is being used](https://github.com/mathiasbynens/dotfiles/blob/aff769fd75225d8f2e481185a71d5e05b76002dc/.aliases#L21-L26)) takes place.
 
