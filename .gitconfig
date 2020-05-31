@@ -1,3 +1,8 @@
+[user]
+
+	name = Sam Symons
+	email = sam@samsymons.com
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -134,3 +139,9 @@
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+
+# Conditional Includes
+
+[includeIf "gitdir:~/Code/Work/"]
+
+	path = ~/Code/Work/.gitconfig
