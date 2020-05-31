@@ -58,6 +58,12 @@ eval "$(rbenv init -)"
 # Haskell
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
+# ========================
+# *** Golang ***
+# ========================
+
+export GOPATH="${HOME}/.go"
+
 # ==============
 # *** Prompt ***
 # ==============
