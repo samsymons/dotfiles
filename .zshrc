@@ -29,6 +29,7 @@ unset file;
 
 export PATH="$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/Cellar:$HOME/.cargo/bin:/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/usr/local/anaconda3/bin:$PATH"
+export PATH="$PATH:$HOME/Code/OSS/Flutter/bin/"
 
 # ===============
 # *** Aliases ***
