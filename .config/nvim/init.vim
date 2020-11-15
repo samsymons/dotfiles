@@ -95,6 +95,8 @@ set splitbelow                  " Opens horizontal split below current window
 set splitright                  " Opens vertical split right of current window
 set updatetime=1000
 
+let g:tex_flavor = 'latex'
+
 " Colors
 " ======
 
