@@ -112,9 +112,3 @@
 [pull]
 
 	ff = only
-
-# Conditional Includes
-
-[includeIf "gitdir:~/Code/Work/"]
-
-	path = ~/Code/Work/.gitconfig
