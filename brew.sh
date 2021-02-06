@@ -26,6 +26,7 @@ brew install openssh
 
 # Install other useful binaries.
 brew install carthage
+brew install exa
 brew install fd
 brew install fzf
 brew install git
