@@ -28,17 +28,12 @@ unset file;
 # ============
 
 export PATH="$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/Cellar:$HOME/.cargo/bin:/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="/usr/local/anaconda3/bin:$PATH"
-export PATH="$PATH:$HOME/Code/OSS/Flutter/bin/"
+export PATH=/opt/homebrew/bin:$PATH
 
 # ===============
 # *** Aliases ***
 # ===============
 
-unalias gs
-alias gs='git status -sb'
-
-alias update='brew update && rustup update'
 alias cat='bat'
 alias du="ncdu --color dark -rr -x --exclude .git"
 alias top="sudo htop"
@@ -63,9 +58,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Ruby
 eval "$(rbenv init -)"
-
-# Haskell
-[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
 
 # ========================
 # *** Golang ***
