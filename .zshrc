@@ -60,11 +60,17 @@ export NVM_DIR="$HOME/.nvm"
 # Ruby
 eval "$(rbenv init -)"
 
-# ========================
+# ==============
 # *** Golang ***
-# ========================
+# ==============
 
 export GOPATH="${HOME}/.go"
+
+# =============
+# *** Tools ***
+# =============
+
+eval "$(zoxide init zsh)"
 
 # ==============
 # *** Prompt ***
