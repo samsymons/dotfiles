@@ -30,6 +30,8 @@ unset file;
 export PATH="$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/Cellar:$HOME/.cargo/bin:/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=/opt/homebrew/bin:$PATH
 
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
+
 # ===============
 # *** Aliases ***
 # ===============
